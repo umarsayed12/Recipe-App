@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Cousine", monospace;
+    font-style: normal;
+}
+
+body{
+    min-height: 100dvh;
+    width: 100dvw;
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    grid-template-rows: 100px 1fr;
+    grid-template-areas: 
+    "header search"
+    "body body";
+    overflow-x: hidden;
+}
+
+header{
+    grid-area: header;
+    place-content: center;
+    text-align: center;
+    font-weight: 700;
+    font-size: 35pt;
+    color: #fff;
+    background-color: #71c953;
+}
+nav{
+    grid-area: search;
+    place-content: center;
+    display: flex;
+    padding: 20px;
+    place-items: center;
+    gap: 10px;
+}
+nav .search{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    height: 70%;
+}
+.search input{
+    width: 100%;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+nav .btn{
+    display: flex;
+    justify-content: start;
+}
+.btn button{
+    height: 35px;
+    width: 80px;
+    background-color: rgb(113, 201, 83);
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px 2px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+main{
+    grid-area: body;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    padding-right: 3%;
+    padding-top: 40px;
+    justify-items: center;
+    background-color: #4f4b4b;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.fa-solid{
+    font-size: 100px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    color: #fff;
+}
+.items{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: #fff;
+}
+
+.items:hover{
+    z-index: 1;
+    box-shadow: 3px 3px 100000px 100000px rgba(0,0,0,0.2);
+}
+.items img{
+    max-width: 100%;
+    height: 400px;
+}
+.items .btn button{
+    width: 100px;
+    height: 50px;
+    font-size: 14pt;
+}
+.items h3{
+    max-width: 90%;
+    text-align: center;
+}
+.items h4{
+    font-weight: 300;
+}
+.recipe{
+    display: none;
+    gap: 10px;
+    text-align: justify;
+    padding: 30px;
+    padding-top: 10px;
+    position: fixed;
+    height: 500px;
+    width: 500px;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    box-shadow: 1px 1px 1000px 1000px rgba(0,0,0,0.8);
+    /* background: url("images/plufow-le-studio-yQAs-jLjwUg-unsplash.jpg"); */
+    background-color: #71c953;
+    overflow-y: scroll;
+    color: #000000;
+    border-radius: 10px;
+}
+.recipe .name{
+    font-size: 20pt;
+    font-weight: 600;
+}
+.cross{
+    display: flex;
+    justify-content: center;
+}
+.fa{
+    cursor: pointer;
+    font-size: 25px;
+}
+.error{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+    color: #fff;
+
+}
+
+@media only screen and (max-width:1000px) {
+    main{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media only screen and (max-width:700px) {
+    main{
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 100px 1fr;
+        grid-template-areas:
+                "header header"
+                "search search"
+                "body body";
+    }
+    nav{
+        background-color: #4f4b4b;
+    }
+    nav .search{
+        width: 70%;
+    }
+    .items{
+        height: 100%;
+        max-width: 90%;
+        
+    }
+    .recipe{
+        height: 60%;
+        width: 80%;
+    }
+}
+@media only screen and (max-width:1500px){
+    .fa-solid{
+        font-size: 50px;
+    }
+}
+@media only screen and (max-width:800px){
+    .fa-solid{
+        font-size: 30px;
+    }
+}
+@media only screen and (max-width:500px){
+    .fa-solid{
+        font-size: 20px;
+    }
+}

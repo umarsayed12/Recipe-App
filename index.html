@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/edf45b1da8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Recipe App</title>
+</head>
+<body>
+    <header>
+        Recipe App
+    </header>
+    <nav>
+        <div class="search"><input type="text" placeholder="Enter the food..." id="input"/></div>
+        <div class="btn"><button id="btn">Find</button></div>
+    </nav>
+    <main>
+        <i class="fa-solid fa-burger" id="welcome"> Recipe App</i>
+    </main>
+    <div class="recipe" id="recipe">
+        <div class="cross"><i class="fa fa-window-close" id="close-btn" aria-hidden="true"></i></div>
+        <div class="name" id="recipe-name">Recipe Name</div>
+        <div class="ingredients">
+            <h3>Ingredients</h3>
+            <ul id="ingredients"></ul>
+        </div>
+        <div class="process"><h3>Process</h3><p id="process"></p></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
